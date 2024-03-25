@@ -1,10 +1,14 @@
 async function main() {
   const { Telegraf, Markup } = require("telegraf");
   const { getDetails } = require("./api");
+  const {
+    BOT_TOKEN,
+    WEB_URL
+  } = require("./config");
   const { sendFile } = require("./utils");
   const express = require("express");
 
-  const bot = new Telegraf("6000584895:AAGWU6JuhJZRNVG8ikdpkwEIDujIUmp1-9E");
+  const bot = new Telegraf(`${BOT_TOKEN}`);
 
   bot.start(async (ctx) => {
     try {
@@ -54,7 +58,7 @@ async function main() {
 
   const app = express();
   // Set the bot API endpoint
-  app.use(await bot.createWebhook({ domain: "https://5cd5b100-760b-4380-baca-0c5b9692dfdd-00-2caxnsw84fdg0.pike.replit.dev" }));
+  app.use(await bot.createWebhook({ domain: `${WEB_URL}` }));
 
   app.listen(process.env.PORT || 3000, () => console.log("Server Started"));
 }
