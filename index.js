@@ -13,9 +13,9 @@ async function main() {
   bot.start(async (ctx) => {
     try {
       ctx.reply(
-        `Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.\n\nMade with ❤️ by @Sparkymon\n\nSend any terabox link to download.`,
+        `Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.\n\nMade with ❤️ by @belladesuda\n\nSend any terabox link to download.`,
         Markup.inlineKeyboard([
-          Markup.button.url(" Devloper", "https://t.me/Sparkymon"),
+          Markup.button.url(" Devloper", "https://t.me/belladesuda"),
           Markup.button.url("Thund Group 💦", "https://t.me/+B5JE_d7N46owNDk1"),
         ]),
       );
