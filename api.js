@@ -5,7 +5,7 @@ async function getDetails(id) {
         const response = await axios.get(
             `https://viper.xasena.me/api/terabox?url=${id}`
         );
-        return response.data;
+        return response.data.downloadUrl;
     } catch (error) {
         console.error(error);
     }
